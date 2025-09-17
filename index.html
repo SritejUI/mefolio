@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sritej Paini | Portfolio</title>
+  <link rel="stylesheet" href="style.css" />
+  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+</head>
+<body>
+  <header>
+    <nav>
+      <a class="logo" onclick="scrollToSection('top')">Sritej Paini</a>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li class="dropdown">
+          <a href="#">Resume ▾</a>
+          <ul class="dropdown-content">
+            <li><a href="SritejPaini_23CSB0F36_resume.pdf" target="_blank">View Resume</a></li>
+            <li><a href="SritejPaini_23CSB0F36_resume.pdf" download>Download Resume</a></li>
+          </ul>
+        </li>
+      </ul>
+
+      <div class="hamburger" onclick="toggleMenu()">☰</div>
+
+      <div class="toggle-container">
+        <label class="switch">
+          <input type="checkbox" id="darkToggle" />
+          <span class="slider"></span>
+        </label>
+      </div>
+    </nav>
+  </header>
+
+  <div id="top"></div>
+
+  <section class="hero">
+    <div class="hero-content">
+      <h1>Hello! I'm Sritej Paini, <span class="typed-wrapper"><span id="typed-text"></span></span></h1>
+      <button onclick="scrollToSection('projects')">Explore Projects</button>
+      <button class="hero-btn" onclick="window.open('SritejPaini_23CSB0F36_resume.pdf', '_blank')">Download Resume</button>
+    </div>
+  </section>
+
+  <section id="about" class="section about">
+    <h2>About Me</h2>
+    <p>
+      I'm a Computer Science student who enjoys turning ideas into working software. Whether it's building full-stack web apps, experimenting with machine learning models, or crafting clean user interfaces, I love working across the stack and learning as I go.
+      <br><br>
+      I've worked on real-time ML model to predict typing fatigue, developed relational database system for E-commerce platform, and deployed my own portfolio using GitHub and Netlify. I'm curious, quick to learn, and always chasing the next challenge in tech.
+      <br><br>
+      When I’m not coding, you’ll find me analyzing football strategy, watching cricket, solving Rubik’s cubes, or bingeing a good series. It’s all a mix of code, chaos, and figuring things out one step at a time.
+    </p>
+  </section>
+
+  <section id="projects" class="section projects">
+    <h2>Projects</h2>
+    <div class="cards">
+      <div class="card">
+        <h3>Mefolio Personal Portfolio Website</h3>
+        <p>
+          An interactive personal website to showcase skills and projects. It features a responsive layout with dark mode, an animated hero section, and smooth scroll navigation. Built with HTML, CSS, and JavaScript, it uses Typed.js for the hero animation and is deployed on Netlify.
+        </p>
+        <a href="https://github.com/SritejUI" target="_blank" class="project-btn">GitHub Repo</a>
+      </div>
+
+      <div class="card">
+        <h3>ShopTrack E-commerce Database Management System</h3>
+        <p>
+          A relational database system for managing products, orders, and customer records. I designed a normalized relational schema, created an ER diagram, and implemented foreign key constraints and triggers for data integrity. I also generated reports on low-stock and sales trends.
+        </p>
+        <a href="https://github.com/SritejUI/shop-track-repo" target="_blank" class="project-btn">GitHub Repo</a>
+      </div>
+
+      <div class="card">
+        <h3>Smart Keystroke Typing Fatigue Detection using ML</h3>
+        <p>
+          An ML model that predicts typing fatigue based on keystroke behavior. I engineered features from key press duration and typing speed. The model uses linear and logistic regression and was improved using gradient descent, regularization, and scaling.
+        </p>
+        <a href="https://github.com/SritejUI/typing-fatigue-ml-repo" target="_blank" class="project-btn">GitHub Repo</a>
+      </div>
+    </div>
+  </section>
+
+  <section id="skills" class="section skills">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <div><strong>Languages:</strong> C++, Java, HTML, CSS, JavaScript, Python, SQL</div>
+      <div><strong>Frameworks:</strong> Typed.js, Scikit-learn, Matplotlib</div>
+      <div><strong>Databases:</strong> OracleSQL</div>
+      <div><strong>Tools:</strong> Git, GitHub, VS Code, Jupyter Notebook, Netlify</div>
+      <div><strong>Concepts:</strong> Data Structures and Algorithms, Object-Oriented Programming, DataBase Management Systems</div>
+      <div><strong>Soft Skills:</strong> Communication, Creativity, Adaptability, Teamwork</div>
+    </div>
+  </section>
+
+  <section id="achievements" class="section achievements">
+    <h2>Positions of Responsibility</h2>
+    <ul>
+      <li>
+        <strong>Executive Member, Quiz Club (2024-2025)</strong>
+        <p>Led and organized weekly quiz sessions and intra-college competitions, engaging over 100 students. Collaborated with peers to curate questions and streamline event execution, enhancing the overall experience for participants.</p>
+      </li>
+    </ul>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2>Contact Me</h2>
+    <form id="contactForm" action="https://formspree.io/f/your-form-id" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="_replyto" placeholder="Your Email" required />
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <p id="formMessage"></p>
+  </section>
+
+  <button id="goTopBtn" title="Go to top">⬆</button>
+
+  <footer>
+    <p>© 2025 Sritej Paini</p>
+    <div class="footer-links">
+      <a href="https://github.com/SritejUI" target="_blank">GitHub</a> |
+      <a href="https://www.linkedin.com/in/sritej-paini-5b82a0293" target="_blank">LinkedIn</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
